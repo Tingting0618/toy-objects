@@ -62,3 +62,7 @@ toys.push(toy4)
 for(let i = 0; i < toys.length; i++) {
     console.log(toys[i].name);
   }
+
+  for (const toy of toys) {
+    console.log(`The ${toy.maker} ${toy.name} costs ${toy.price} dollars.`)
+}
