@@ -57,12 +57,44 @@ const toy4 = {
 toys.push(toy3)
 toys.push(toy4)
 
+
+
+
+const addToyToInventory = (toyObject) => {
+    const lastIndex = toys.length - 1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+
+    const idForNewToy = maxId +1 
+
+    toyObject.id = idForNewToy
+
+    toys.push(toyObject)
+}
+
+const anewtoy = {
+    name: "IDontKnow",
+    maker: "Google",
+    operatingSystem: "PineApple",
+    price: 20,
+    weight: 0.5   
+}
+
+addToyToInventory(anewtoy)
+
 /* console.log(toys)*/
 
 for(let i = 0; i < toys.length; i++) {
     console.log(toys[i].name);
   }
 
-  for (const toy of toys) {
+for (const toy of toys) {
+    if (toy.id = 2){
+    // Add 5% price 
+    toy.price = toy.price*1.05
+
     console.log(`The ${toy.maker} ${toy.name} costs ${toy.price} dollars.`)
+    }
 }
+
+console.log(toys)
